@@ -52,3 +52,7 @@ kubeconfig:
 	@echo "KUBECONFIG set to ./azurek8s. You can now use kubectl to interact with your cluster."
 	@echo "Validate Cluster AKS"
 	@kubectl get nodes
+
+# Genera un reporte de costos con Infracost
+infracost: tf-plan
+	infracost breakdown --path tfplan

@@ -28,11 +28,12 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   }
 
   default_node_pool {
-    name                 = "agentpool"
-    vm_size              = "Standard_D2_v2"
-    node_count           = var.node_count
-    os_sku               = "Ubuntu"
-    orchestrator_version = var.kubernetes_version
+    name                        = "agentpool"
+    vm_size                     = "standard_b2s"
+    node_count                  = var.node_count
+    os_sku                      = "Ubuntu"
+    orchestrator_version        = var.kubernetes_version
+    temporary_name_for_rotation = "nodepool1"
 
     upgrade_settings {
       drain_timeout_in_minutes      = 0
