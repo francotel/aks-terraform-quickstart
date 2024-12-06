@@ -1,0 +1,4 @@
+resource_group_location    = "eastus"
+resource_group_name_prefix = "rg-aks-demo"
+
+node_count = 2
