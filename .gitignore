@@ -127,3 +127,4 @@ override.tf.json
 terraform.rc
 
 tfplan
+azurek8s
