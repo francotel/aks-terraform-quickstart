@@ -96,7 +96,7 @@ The deployment includes the following services:
 
 ### 📂 **Steps to Deploy**
 1. **Create Manifest File**:
-   - Save the configuration in `aks-store-quickstart.yaml`.
+   - Save the configuration in `app/aks-store-quickstart.yaml`.
    - This file includes definitions for `Deployments` and `Services`.
 
 2. **Deploy with kubectl**:

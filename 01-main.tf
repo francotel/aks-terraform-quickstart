@@ -21,7 +21,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
   name                = random_pet.azurerm_kubernetes_cluster_name.id
   resource_group_name = azurerm_resource_group.rg.name
   dns_prefix          = random_pet.azurerm_kubernetes_cluster_dns_prefix.id
-  kubernetes_version  = "1.30"
+  kubernetes_version  = var.kubernetes_version
 
   identity {
     type = "SystemAssigned"
@@ -32,7 +32,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     vm_size              = "Standard_D2_v2"
     node_count           = var.node_count
     os_sku               = "Ubuntu"
-    orchestrator_version = "1.30"
+    orchestrator_version = var.kubernetes_version
 
     upgrade_settings {
       drain_timeout_in_minutes      = 0
