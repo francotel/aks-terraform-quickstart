@@ -38,7 +38,7 @@ tf-apply: tf-plan
 	terraform apply -auto-approve tfplan
 
 # Destroy Terraform-managed resources
-tf-destroy: azure-login
+tf-destroy:
 	terraform destroy -auto-approve 
 
 # Show Terraform outputs

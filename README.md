@@ -118,6 +118,17 @@ NAME          TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)        AGE
 store-front   LoadBalancer   10.0.100.10   20.62.159.19   80:30025/TCP   4h5m
 ```
 
-### 🌐 Access the App
+#### 🌐 Access the App
 Once the EXTERNAL-IP is assigned, open it in a web browser to access the app.
 🎉 Your AKS Store application is now live! Happy deploying! 🚀
+
+
+#### 🗑️ Clean Up Resources: Delete AKS Resources
+
+When you're done with the AKS deployment, you can clean up the resources created by Terraform to avoid unnecessary costs.
+
+### 🛠️ **Steps to Destroy Resources**
+1. **Generate a Destroy Plan**:
+   Run the following command to create a plan for deleting resources:
+   ```bash
+   terraform plan -destroy -out main.destroy.tfplan
